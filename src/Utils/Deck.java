@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Deck {
-    private final List<Card> cards;
+    private final LinkedList<Card> cards;
 
     /**
      * @param type what kind of game (standard, euchre, etc)
@@ -55,6 +55,14 @@ public class Deck {
 
     public List<Card> getCards(){
         return cards;
+    }
+
+    public Card pop(){
+        return cards.pop();
+    }
+
+    public boolean isEmpty(){
+        return cards.isEmpty();
     }
 
     public void shuffle(){
